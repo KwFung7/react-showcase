@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
-import { AppSwitch } from '@coreui/react'
+import { AppSwitch } from '@coreui/react';
+import reactElementToJSXString from 'react-element-to-jsx-string';
 
 class BasicButtons extends Component {
   constructor(props) {
@@ -153,6 +154,9 @@ class BasicButtons extends Component {
                   <Button block color="link" disabled>Link</Button>
                 </Col>
               </Row>
+            }
+            {
+              <code>{reactElementToJSXString(<Button block color="primary">Primary</Button>)}</code>
             }
           </CardBody>
         </Card>
