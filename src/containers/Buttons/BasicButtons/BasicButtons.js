@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardBody, CardHeader } from 'reactstrap';
 import { AppSwitch } from '@coreui/react';
-import reactElementToJSXString from 'react-element-to-jsx-string';
 import BootstrapButtons from '../../../components/BootstrapButtons';
 
 class BasicButtons extends Component {
@@ -61,7 +60,6 @@ class BasicButtons extends Component {
           </CardHeader>
           <CardBody>
             <BootstrapButtons {...this.state} />
-            {reactElementToJSXString(BootstrapButtons(this.state))}
           </CardBody>
         </Card>
       </div>

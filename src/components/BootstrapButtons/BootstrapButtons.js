@@ -56,4 +56,3 @@ BootstrapButtons.propTypes = propTypes;
 BootstrapButtons.defaultProps = defaultProps;
 
 export default BootstrapButtons;
-
