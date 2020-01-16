@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card, CardBody, CardHeader } from 'reactstrap';
 import { AppSwitch } from '@coreui/react';
 import BootstrapButtons from '../../../components/BootstrapButtons';
+import gistUrl from '../../../gist-url';
 
 class BasicButtons extends Component {
   constructor(props) {
@@ -57,9 +58,27 @@ class BasicButtons extends Component {
         <Card>
           <CardHeader>
             <strong>Bootstrap Buttons</strong>
+            <div className="card-header-actions">
+              <a href={gistUrl.bootstrapButtons} rel="noreferrer noopener" target="_blank" className="card-header-action">
+                <small className="text-muted">Source Code <i className="icon-arrow-right"></i></small>
+              </a>
+            </div>
           </CardHeader>
           <CardBody>
             <BootstrapButtons {...this.state} />
+          </CardBody>
+        </Card>
+        <Card>
+          <CardHeader>
+            <strong>Bootstrap Outline Buttons</strong>
+            <div className="card-header-actions">
+              <a href={gistUrl.bootstrapButtons} rel="noreferrer noopener" target="_blank" className="card-header-action">
+                <small className="text-muted">Source Code <i className="icon-arrow-right"></i></small>
+              </a>
+            </div>
+          </CardHeader>
+          <CardBody>
+            <BootstrapButtons {...this.state} isOutline={true} />
           </CardBody>
         </Card>
       </div>
