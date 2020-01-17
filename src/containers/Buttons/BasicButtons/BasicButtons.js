@@ -65,19 +65,9 @@ class BasicButtons extends Component {
             </div>
           </CardHeader>
           <CardBody>
+            <div className="my-3">Standard</div>
             <BootstrapButtons {...this.state} />
-          </CardBody>
-        </Card>
-        <Card>
-          <CardHeader>
-            <strong>Bootstrap Outline Buttons</strong>
-            <div className="card-header-actions">
-              <a href={gistUrl.bootstrapButtons} rel="noreferrer noopener" target="_blank" className="card-header-action">
-                <small className="text-muted">Source Code <i className="icon-arrow-right"></i></small>
-              </a>
-            </div>
-          </CardHeader>
-          <CardBody>
+            <div className="my-3">Outline</div>
             <BootstrapButtons {...this.state} isOutline={true} />
           </CardBody>
         </Card>
