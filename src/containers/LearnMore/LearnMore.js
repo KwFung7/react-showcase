@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBody, Col, Jumbotron, Row } from 'reactstrap';
+import { Button, Card, CardHeader, CardBody, Col, Jumbotron, Row } from 'reactstrap';
 import { learnMore } from '../../article';
 import ReactHtmlParser from 'react-html-parser';
 
@@ -13,6 +13,9 @@ class LearnMore extends Component {
             learnMore.map(item => (
               <Col>
                 <Card>
+                  <CardHeader>
+                    <strong>{item.group}</strong>
+                  </CardHeader>
                   <CardBody>
                     <Jumbotron className="my-0">
                       <h1 className="display-3">{item.title}</h1>
