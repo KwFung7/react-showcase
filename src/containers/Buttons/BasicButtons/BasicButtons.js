@@ -45,9 +45,9 @@ class BasicButtons extends Component {
             </div>
           </CardHeader>
           <CardBody>
-            <div className="my-3">Standard</div>
+            <div className="mb-3"><u>Standard</u></div>
             <BootstrapButtons {...this.state} />
-            <div className="my-3">Outline</div>
+            <div className="mb-3 mt-4"><u>Outline</u></div>
             <BootstrapButtons {...this.state} isOutline={true} />
           </CardBody>
         </Card>
@@ -61,14 +61,14 @@ class BasicButtons extends Component {
             </div>
           </CardHeader>
           <CardBody>
-            <div className="my-3">Text Button</div>
-            <MaterialButtons {...this.state} />
-            <div className="my-3">Contained</div>
+            <div className="mb-3"><u>Contained</u></div>
             <MaterialButtons {...this.state} variant="contained" />
-            <div className="my-3">Outline</div>
+            <div className="mb-3 mt-4"><u>Outline</u></div>
             <MaterialButtons {...this.state} variant="outlined" />
-            <div className="my-3">No Elevation</div>
+            <div className="mb-3 mt-4"><u>No Elevation</u></div>
             <MaterialButtons {...this.state} variant="contained" isElevation={false} />
+            <div className="mb-3 mt-4"><u>Text Button</u></div>
+            <MaterialButtons {...this.state} />
           </CardBody>
         </Card>
       </div>
