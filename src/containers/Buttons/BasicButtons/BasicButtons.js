@@ -2,36 +2,25 @@ import React, { Component } from 'react';
 import { Card, CardBody, CardHeader } from 'reactstrap';
 import { AppSwitch } from '@coreui/react';
 import BootstrapButtons from '../../../components/BootstrapButtons';
+import MaterialButtons from "../../../components/MaterialButtons";
 import gistUrl from '../../../gist-url';
 
 class BasicButtons extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isDisabled: false,
-      isActive: false
+      isDisabled: false
     }
   }
 
   toggleDisableMode = () => {
-    this.setState((state) => ({
-      isDisabled: !state.isDisabled
-    }));
-  };
-
-  toggleActiveMode = () => {
-    this.setState((state) => ({
-      isActive: !state.isActive
-    }));
-  };
-
-  toggleBoth = () => {
-    this.toggleDisableMode();
-    this.toggleActiveMode();
+    this.setState({
+      isDisabled: !this.state.isDisabled
+    });
   };
 
   render() {
-    const { isDisabled, isActive } = this.state;
+    const { isDisabled } = this.state;
 
     return (
       <div className="animated fadeIn">
@@ -43,16 +32,7 @@ class BasicButtons extends Component {
               variant={'pill'}
               color={'secondary'}
               checked={isDisabled}
-              onChange={!isDisabled && isActive ? this.toggleBoth : this.toggleDisableMode} />
-          </div>
-          <div className="d-flex align-items-center">
-            <div className="text-black-50">Active</div>
-            <AppSwitch
-              className={'mx-1'}
-              variant={'pill'}
-              color={'secondary'}
-              checked={isActive}
-              onChange={!isActive && isDisabled ? this.toggleBoth : this.toggleActiveMode} />
+              onChange={this.toggleDisableMode} />
           </div>
         </div>
         <Card>
@@ -69,6 +49,26 @@ class BasicButtons extends Component {
             <BootstrapButtons {...this.state} />
             <div className="my-3">Outline</div>
             <BootstrapButtons {...this.state} isOutline={true} />
+          </CardBody>
+        </Card>
+        <Card>
+          <CardHeader>
+            <strong>Material-UI Buttons</strong>
+            <div className="card-header-actions">
+              <a href={gistUrl.materialButtons} rel="noreferrer noopener" target="_blank" className="card-header-action">
+                <small className="text-muted">Source Code <i className="icon-arrow-right"></i></small>
+              </a>
+            </div>
+          </CardHeader>
+          <CardBody>
+            <div className="my-3">Text Button</div>
+            <MaterialButtons {...this.state} />
+            <div className="my-3">Contained</div>
+            <MaterialButtons {...this.state} variant="contained" />
+            <div className="my-3">Outline</div>
+            <MaterialButtons {...this.state} variant="outlined" />
+            <div className="my-3">No Elevation</div>
+            <MaterialButtons {...this.state} variant="contained" isElevation={false} />
           </CardBody>
         </Card>
       </div>
