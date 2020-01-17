@@ -1,3 +1,15 @@
 {
-  "introduction": "https://teams.microsoft.com/l/channel/19%3ae28f7097d1104344a70551c590b7379e%40thread.skype/Frontend?groupId=0f7134ab-ecd1-414e-a5bd-b89a346b28f7&tenantId=e0793d39-0939-496d-b129-198edd916feb"
+  "introduction": "https://teams.microsoft.com/l/channel/19%3ae28f7097d1104344a70551c590b7379e%40thread.skype/Frontend?groupId=0f7134ab-ecd1-414e-a5bd-b89a346b28f7&tenantId=e0793d39-0939-496d-b129-198edd916feb",
+  "learnMore": [
+    {
+      "title": "CSS Modules",
+      "desc": "<div>What are CSS Modules and why do we need them?</div><div>CSS Module means files in which all class names and animation names are scoped locally by default</div>",
+      "url": "https://css-tricks.com/css-modules-part-1-need/"
+    },
+    {
+      "title": "BEM practice",
+      "desc": "Block, Element, Modifier methodology (commonly referred to as BEM) is a popular naming convention for classes in HTML and CSS",
+      "url": "https://css-tricks.com/bem-101/"
+    }
+  ]
 }
