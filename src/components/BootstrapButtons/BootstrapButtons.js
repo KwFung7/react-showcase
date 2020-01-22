@@ -5,24 +5,27 @@ import { Button, Col, Row } from "reactstrap";
 const propTypes = {
   isDisabled: PropTypes.bool,
   isActive: PropTypes.bool,
-  isOutline: PropTypes.bool
+  isOutline: PropTypes.bool,
+  onClick: PropTypes.func
 };
 
 const defaultProps = {
   isDisabled: false,
   isActive: false,
-  isOutline: false
+  isOutline: false,
+  onClick: () => {}
 };
 
 class BootstrapButtons extends React.Component {
 
   render() {
-    const { isDisabled, isActive, isOutline } = this.props;
+    const { isDisabled, isActive, isOutline, onClick } = this.props;
     const props = {
       disabled: isDisabled,
       active: isActive,
       outline: isOutline,
-      'aria-pressed': isActive
+      'aria-pressed': isActive,
+      onClick
     };
 
     return (

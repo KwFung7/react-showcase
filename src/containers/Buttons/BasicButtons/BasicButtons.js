@@ -19,6 +19,10 @@ class BasicButtons extends Component {
     });
   };
 
+  handleBtnClick = () => {
+    console.log('Button click event.');
+  };
+
   render() {
     const { isDisabled } = this.state;
 
@@ -46,9 +50,9 @@ class BasicButtons extends Component {
           </CardHeader>
           <CardBody>
             <div className="mb-3"><u>Standard</u></div>
-            <BootstrapButtons {...this.state} />
+            <BootstrapButtons {...this.state} onClick={this.handleBtnClick} />
             <div className="mb-3 mt-4"><u>Outline</u></div>
-            <BootstrapButtons {...this.state} isOutline={true} />
+            <BootstrapButtons {...this.state} isOutline={true} onClick={this.handleBtnClick} />
           </CardBody>
         </Card>
         <Card>
@@ -62,13 +66,13 @@ class BasicButtons extends Component {
           </CardHeader>
           <CardBody>
             <div className="mb-3"><u>Contained</u></div>
-            <MaterialButtons {...this.state} variant="contained" />
+            <MaterialButtons {...this.state} variant="contained" onClick={this.handleBtnClick} />
             <div className="mb-3 mt-4"><u>Outline</u></div>
-            <MaterialButtons {...this.state} variant="outlined" />
+            <MaterialButtons {...this.state} variant="outlined" onClick={this.handleBtnClick} />
             <div className="mb-3 mt-4"><u>No Elevation</u></div>
-            <MaterialButtons {...this.state} variant="contained" isElevation={false} />
+            <MaterialButtons {...this.state} variant="contained" isElevation={false} onClick={this.handleBtnClick} />
             <div className="mb-3 mt-4"><u>Text Button</u></div>
-            <MaterialButtons {...this.state} />
+            <MaterialButtons {...this.state} onClick={this.handleBtnClick} />
           </CardBody>
         </Card>
       </div>

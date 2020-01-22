@@ -7,25 +7,28 @@ const propTypes = {
   isDisabled: PropTypes.bool,
   isActive: PropTypes.bool,
   isElevation: PropTypes.bool,
-  variant: PropTypes.string
+  variant: PropTypes.string,
+  onClick: PropTypes.func
 };
 
 const defaultProps = {
   isDisabled: false,
   isActive: false,
   isElevation: true,
-  variant: "text"
+  variant: "text",
+  onClick: () => {}
 };
 
 class MaterialButtons extends React.Component {
 
   render() {
-    const { isDisabled, isActive, isElevation, variant } = this.props;
+    const { isDisabled, isActive, isElevation, variant, onClick } = this.props;
     const props = {
       disabled: isDisabled,
       disableElevation: !isElevation,
       'aria-pressed': isActive,
-      variant
+      variant,
+      onClick
     };
 
     return (
