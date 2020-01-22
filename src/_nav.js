@@ -36,7 +36,7 @@ export default {
     },
     {
       name: 'Switch to Angular',
-      url: 'https://coreui.io/pro/angular/',
+      // url: 'https://coreui.io/pro/angular/',
       icon: 'fab fa-angular',
       variant: 'danger'
     }
