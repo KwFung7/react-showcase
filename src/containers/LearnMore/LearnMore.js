@@ -19,7 +19,7 @@ class LearnMore extends Component {
                   <CardBody>
                     <Jumbotron className="my-0">
                       <h1 className="display-3">{item.title}</h1>
-                      <p className="lead">{ReactHtmlParser(item.desc)}</p>
+                      <div className="lead">{ReactHtmlParser(item.desc)}</div>
                       <hr className="my-3" />
                       <div className="lead">
                         <a href={item.url} rel="noreferrer noopener" target="_blank">
