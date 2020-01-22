@@ -3,7 +3,7 @@ import { Card, CardBody, CardHeader } from 'reactstrap';
 import { AppSwitch } from '@coreui/react';
 import BootstrapButtons from '../../../components/BootstrapButtons';
 import MaterialButtons from "../../../components/MaterialButtons";
-import gistUrl from '../../../gist-url';
+import codeUrl from '../../../code-url';
 
 class BasicButtons extends Component {
   constructor(props) {
@@ -43,7 +43,7 @@ class BasicButtons extends Component {
           <CardHeader>
             <strong>Bootstrap Buttons</strong>
             <div className="card-header-actions">
-              <a href={gistUrl.bootstrapButtons} rel="noreferrer noopener" target="_blank" className="card-header-action">
+              <a href={codeUrl.bootstrapButtons} rel="noreferrer noopener" target="_blank" className="card-header-action">
                 <small className="text-muted">Source Code <i className="icon-arrow-right"></i></small>
               </a>
             </div>
@@ -59,7 +59,7 @@ class BasicButtons extends Component {
           <CardHeader>
             <strong>Material-UI Buttons</strong>
             <div className="card-header-actions">
-              <a href={gistUrl.materialButtons} rel="noreferrer noopener" target="_blank" className="card-header-action">
+              <a href={codeUrl.materialButtons} rel="noreferrer noopener" target="_blank" className="card-header-action">
                 <small className="text-muted">Source Code <i className="icon-arrow-right"></i></small>
               </a>
             </div>
