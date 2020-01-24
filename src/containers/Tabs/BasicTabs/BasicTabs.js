@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { Card, CardBody, CardHeader } from 'reactstrap';
-import { AppSwitch } from '@coreui/react';
 import BootstrapTabs from '../../../components/BootstrapTabs';
 import codeUrl from '../../../code-url';
 
