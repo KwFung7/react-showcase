@@ -3,5 +3,6 @@ import Dashboard from './Dashboard';
 import Buttons from './Buttons';
 import Dropdown from './Dropdown';
 import ListGroup from './ListGroup';
+import Tabs from './Tabs';
 
-export { StandardLayout, Dashboard, Buttons, Dropdown, ListGroup};
+export { StandardLayout, Dashboard, Buttons, Dropdown, ListGroup, Tabs};

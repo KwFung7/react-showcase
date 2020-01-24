@@ -2,5 +2,6 @@
   "bootstrapButtons": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapButtons/BootstrapButtons.js",
   "materialButtons": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/MaterialButtons/MaterialButtons.js",
   "bootstrapDropdown": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapDropdown/BootstrapDropdown.js",
-  "bootstrapListGroup": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapListGroup/BootstrapListGroup.js"
+  "bootstrapListGroup": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapListGroup/BootstrapListGroup.js",
+  "bootstrapTabs": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapTabs/BootstrapTabs.js"
 }

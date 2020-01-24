@@ -50,6 +50,18 @@ export default {
       ],
     },
     {
+      name: 'Tabs',
+      url: '/tabs',
+      icon: 'icon-cursor',
+      children: [
+        {
+          name: 'Basic Tabs',
+          url: '/tabs/basic-tabs',
+          icon: 'icon-puzzle',
+        }
+      ],
+    },
+    {
       title: true,
       name: 'Extras'
     },
