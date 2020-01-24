@@ -3,14 +3,6 @@ import PropTypes from 'prop-types';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from "reactstrap";
 import classnames from 'classnames';
 
-const bootstrapListGroupPropTypes = {
-    tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-    flush: PropTypes.bool,
-    horizontal: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-    className: PropTypes.string,
-    cssModule: PropTypes.object,
-};
-
 const defaultProps = {
   activeTab: 'tab1',
   toggle: () => {},
