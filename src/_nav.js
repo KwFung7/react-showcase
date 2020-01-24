@@ -26,6 +26,30 @@ export default {
       ],
     },
     {
+      name: 'Dropdown',
+      url: '/dropdown',
+      icon: 'icon-cursor',
+      children: [
+        {
+          name: 'Basic Dropdown',
+          url: '/dropdown/basic-dropdown',
+          icon: 'icon-puzzle',
+        }
+      ],
+    },
+    {
+      name: 'List Group',
+      url: '/list-group',
+      icon: 'icon-cursor',
+      children: [
+        {
+          name: 'Basic List Group',
+          url: '/list-group/basic-list-group',
+          icon: 'icon-puzzle',
+        }
+      ],
+    },
+    {
       title: true,
       name: 'Extras'
     },
