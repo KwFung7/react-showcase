@@ -46,7 +46,7 @@ class BasicListGroup extends Component {
           <CardHeader>
             <strong>Bootstrap List Group</strong>
             <div className="card-header-actions">
-              <a href={codeUrl.bootstrapDropdown} rel="noreferrer noopener" target="_blank" className="card-header-action">
+              <a href={codeUrl.bootstrapListGroup} rel="noreferrer noopener" target="_blank" className="card-header-action">
                 <small className="text-muted">Source Code <i className="icon-arrow-right"></i></small>
               </a>
             </div>
