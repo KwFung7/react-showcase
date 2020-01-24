@@ -13,6 +13,7 @@ const bootstrapListGroupPropTypes = {
 const defaultProps = {
   isFlush: false,
   isHorizontal: false,
+  isLink: false,
   items: []
 };
 
@@ -20,12 +21,13 @@ class BootstrapListGroup extends React.Component {
 
   render() {
 
-    const { isHorizontal, isFlush, items} = this.props;
+    const { isHorizontal, isFlush, items, isLink } = this.props;
 
     return (
       <ListGroup flush={isFlush} horizontal={isHorizontal}>
         {items.map((item) => (
-          <ListGroupItem tag="a" href="#" key={item.key} color={item.color} active={item.isActive} action={item.isAction} disabled={item.isDisabled}>
+          <ListGroupItem key={item.key} color={item.color} tag={isLink?'a':'li'} href={isLink?item.link:''}
+            active={item.isActive} action={item.isAction} disabled={item.isDisabled}>
             {item.title}
           </ListGroupItem>
         ))}

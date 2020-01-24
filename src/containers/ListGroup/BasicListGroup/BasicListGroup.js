@@ -8,12 +8,12 @@ class BasicListGroup extends Component {
   constructor(props) {
     super(props);
     this.items = [
-      { key: 'primary', title: 'Primary isActive', color:'primary', isActive: true, isAction: false, isDisabled: false},
-      { key: 'secondary', title: 'Secondary isAction', color:'secondary', isActive: false, isAction: true, isDisabled: false },
-      { key: 'success', title: 'Success isDisabled', color:'success', isActive: false, isAction: false, isDisabled: true },
-      { key: 'info', title: 'Info isAction', color:'info', isActive: false, isAction: true, isDisabled: false },
-      { key: 'warning', title: 'Warning isAction', color:'warning', isActive: false, isAction: true, isDisabled: false },
-      { key: 'danger', title: 'Danger', color:'danger', isActive: false, isAction: false, isDisabled: false },
+      { key: 'primary', title: 'Primary isActive', color:'primary', isActive: true, isAction: false, isDisabled: false, link:'http://www.accenture.com'},
+      { key: 'secondary', title: 'Secondary isAction', color:'secondary', isActive: false, isAction: true, isDisabled: false, link:'http://www.accenture.com'},
+      { key: 'success', title: 'Success isDisabled', color:'success', isActive: false, isAction: false, isDisabled: true, link:'http://www.accenture.com'},
+      { key: 'info', title: 'Info', color:'info', isActive: false, isAction: false, isDisabled: false, link:'http://www.accenture.com'},
+      { key: 'warning', title: 'Warning', color:'warning', isActive: false, isAction: false, isDisabled: false, link:'http://www.accenture.com'},
+      { key: 'danger', title: 'Danger', color:'danger', isActive: false, isAction: false, isDisabled: false, link:'http://www.accenture.com'},
     ];
     this.state = {
       isFlush: false
@@ -56,6 +56,8 @@ class BasicListGroup extends Component {
             <BootstrapListGroup {...this.state} items={this.items} />
             <div className="mb-3 mt-4"><u>Horizontal</u></div>
             <BootstrapListGroup {...this.state} items={this.items} isHorizontal/>
+            <div className="mb-3 mt-4"><u>Link</u></div>
+            <BootstrapListGroup {...this.state} items={this.items} isLink/>
           </CardBody>
         </Card>
         
