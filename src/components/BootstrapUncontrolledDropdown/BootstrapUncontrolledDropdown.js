@@ -1,20 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Col, Row } from "reactstrap";
 
+const propTypes = {
+  isDisabled: PropTypes.bool,
+  dropdowns: PropTypes.array.isRequired,
+  items: PropTypes.array.isRequired
+};
+
 const defaultProps = {
-  isDisabled: false,
-  dorpdowns: [],
-  items: []
+  isDisabled: false
 };
 
 class BootstrapUncontrolledDropdown extends React.Component {
 
   render() {
-    const { isDisabled, dorpdowns, items } = this.props;
+    const { isDisabled, dropdowns, items } = this.props;
 
     return (
       <Row className="align-items-center">
-      {dorpdowns.map(
+      {dropdowns.map(
         variant => (
           <Col col="6" sm="4" md="2" xl className="mb-3 mb-xl-0" key={variant.title} >
             <UncontrolledDropdown direction={variant.direction}>
@@ -23,7 +28,7 @@ class BootstrapUncontrolledDropdown extends React.Component {
               </DropdownToggle>
               <DropdownMenu>
                 {items.map((item) => (
-                  <DropdownItem key={item.key} header={item.isHeader}  divider={item.isDivider}  disabled={item.isDisabled}>
+                  <DropdownItem key={item.key} header={item.isHeader} divider={item.isDivider} disabled={item.isDisabled}>
                     {item.title}
                   </DropdownItem>
                 ))}
@@ -37,6 +42,7 @@ class BootstrapUncontrolledDropdown extends React.Component {
   }
 }
 
+BootstrapUncontrolledDropdown.propTypes = propTypes;
 BootstrapUncontrolledDropdown.defaultProps = defaultProps;
 
 export default BootstrapUncontrolledDropdown;

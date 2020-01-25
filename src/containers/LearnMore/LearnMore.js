@@ -17,8 +17,8 @@ class LearnMore extends Component {
                     <strong>{item.group}</strong>
                   </CardHeader>
                   <CardBody>
-                    <Jumbotron className="my-0">
-                      <h1 className="display-3">{item.title}</h1>
+                    <Jumbotron className="my-0 p-4">
+                      <h1 className="display-4">{item.title}</h1>
                       <div className="lead">{ReactHtmlParser(item.desc)}</div>
                       <hr className="my-3" />
                       <div className="lead">

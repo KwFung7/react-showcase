@@ -3,29 +3,18 @@ import PropTypes from 'prop-types';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, Col, Row } from "reactstrap";
 
 const bootstrapDropdownPropTypes = {
-  disabled: PropTypes.bool,
-  direction: PropTypes.oneOf(['up', 'down', 'left', 'right']),
-  group: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   isOpen: PropTypes.bool,
-  tag: PropTypes.string,
-  toggle: PropTypes.func
-};
-
-const dropdownTogglePropTypes = {
-  caret: PropTypes.bool,
-  color: PropTypes.string,
-  disabled: PropTypes.bool,
+  toggle: PropTypes.func,
   onClick: PropTypes.func,
-  'data-toggle': PropTypes.string,
-  'aria-haspopup': PropTypes.bool
+  value: PropTypes.string.isRequired
 };
 
 const defaultProps = {
   isDisabled: false,
   isOpen: false,
   toggle: () => {},
-  onClick: () => {},
-  value: 'Dropdown'
+  onClick: () => {}
 };
 
 class BootstrapDropdown extends React.Component {
@@ -56,7 +45,6 @@ class BootstrapDropdown extends React.Component {
 }
 
 BootstrapDropdown.propTypes = bootstrapDropdownPropTypes;
-DropdownToggle.propTypes = dropdownTogglePropTypes;
 BootstrapDropdown.defaultProps = defaultProps;
 
 export default BootstrapDropdown;
