@@ -13,12 +13,9 @@ const routes = [
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/buttons', exact: true, name: 'Buttons', component: BasicButtons },
   { path: '/buttons/basic-buttons', name: 'Basic Buttons', component: BasicButtons },
-  { path: '/dropdown', exact: true, name: 'Dropdown', component: BasicDropdown },
-  { path: '/dropdown/basic-dropdown', name: 'Basic Dropdown', component: BasicDropdown },  
+  { path: '/buttons/button-dropdown', name: 'Button Dropdown', component: BasicDropdown },
   { path: '/list-group', exact: true, name: 'List Group', component: BasicListGroup },
-  { path: '/list-group/basic-list-group', name: 'Basic List Group', component: BasicListGroup },
   { path: '/tabs', exact: true, name: 'Tabs', component: BasicTabs },
-  { path: '/tabs/basic-tabs', name: 'Basic Tabs', component: BasicTabs },
   { path: '/learn-more', name: 'Learn More', component: LearnMore }
 ];
 

@@ -21,18 +21,11 @@ export default {
         {
           name: 'Basic Buttons',
           url: '/buttons/basic-buttons',
-          icon: 'icon-cursor',
-        }
-      ],
-    },
-    {
-      name: 'Dropdown',
-      url: '/dropdown',
-      icon: 'icon-cursor',
-      children: [
+          icon: 'icon-puzzle',
+        },
         {
-          name: 'Basic Dropdown',
-          url: '/dropdown/basic-dropdown',
+          name: 'Button Dropdown',
+          url: '/buttons/button-dropdown',
           icon: 'icon-puzzle',
         }
       ],
@@ -40,26 +33,12 @@ export default {
     {
       name: 'List Group',
       url: '/list-group',
-      icon: 'icon-cursor',
-      children: [
-        {
-          name: 'Basic List Group',
-          url: '/list-group/basic-list-group',
-          icon: 'icon-puzzle',
-        }
-      ],
+      icon: 'icon-cursor'
     },
     {
       name: 'Tabs',
       url: '/tabs',
-      icon: 'icon-cursor',
-      children: [
-        {
-          name: 'Basic Tabs',
-          url: '/tabs/basic-tabs',
-          icon: 'icon-puzzle',
-        }
-      ],
+      icon: 'icon-cursor'
     },
     {
       title: true,
