@@ -4,17 +4,18 @@ import { AppSwitch } from '@coreui/react';
 import BootstrapListGroup from '../../components/BootstrapListGroup';
 import codeUrl from '../../code-url';
 
+const items = [
+  { key: 'primary', title: 'Primary isActive', color:'primary', isActive: true, isAction: false, isDisabled: false, link: 'http://www.accenture.com' },
+  { key: 'secondary', title: 'Secondary isAction', color:'secondary', isActive: false, isAction: true, isDisabled: false, link: 'http://www.accenture.com' },
+  { key: 'success', title: 'Success isDisabled', color:'success', isActive: false, isAction: false, isDisabled: true, link: 'http://www.accenture.com' },
+  { key: 'info', title: 'Info', color:'info', isActive: false, isAction: false, isDisabled: false, link: 'http://www.accenture.com' },
+  { key: 'warning', title: 'Warning', color:'warning', isActive: false, isAction: false, isDisabled: false, link: 'http://www.accenture.com' },
+  { key: 'danger', title: 'Danger', color:'danger', isActive: false, isAction: false, isDisabled: false, link: 'http://www.accenture.com' },
+];
+
 class BasicListGroup extends Component {
   constructor(props) {
     super(props);
-    this.items = [
-      { key: 'primary', title: 'Primary isActive', color:'primary', isActive: true, isAction: false, isDisabled: false, link:'http://www.accenture.com'},
-      { key: 'secondary', title: 'Secondary isAction', color:'secondary', isActive: false, isAction: true, isDisabled: false, link:'http://www.accenture.com'},
-      { key: 'success', title: 'Success isDisabled', color:'success', isActive: false, isAction: false, isDisabled: true, link:'http://www.accenture.com'},
-      { key: 'info', title: 'Info', color:'info', isActive: false, isAction: false, isDisabled: false, link:'http://www.accenture.com'},
-      { key: 'warning', title: 'Warning', color:'warning', isActive: false, isAction: false, isDisabled: false, link:'http://www.accenture.com'},
-      { key: 'danger', title: 'Danger', color:'danger', isActive: false, isAction: false, isDisabled: false, link:'http://www.accenture.com'},
-    ];
     this.state = {
       isFlush: false
     };
@@ -53,11 +54,11 @@ class BasicListGroup extends Component {
           </CardHeader>
           <CardBody>
             <div className="mb-3"><u>Standard</u></div>
-            <BootstrapListGroup {...this.state} items={this.items} />
+            <BootstrapListGroup {...this.state} items={items} />
             <div className="mb-3 mt-4"><u>Horizontal</u></div>
-            <BootstrapListGroup {...this.state} items={this.items} isHorizontal/>
+            <BootstrapListGroup {...this.state} items={items} isHorizontal/>
             <div className="mb-3 mt-4"><u>Link</u></div>
-            <BootstrapListGroup {...this.state} items={this.items} isLink/>
+            <BootstrapListGroup {...this.state} items={items} isLink/>
           </CardBody>
         </Card>
         
