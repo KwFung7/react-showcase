@@ -1,11 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from "reactstrap";
 import classnames from 'classnames';
 
+const propTypes = {
+  activeTab: PropTypes.string,
+  toggle: PropTypes.func,
+  tabs: PropTypes.array.isRequired
+};
+
 const defaultProps = {
   activeTab: 'tab1',
-  toggle: () => {},
-  tabs: []
+  toggle: () => {}
 };
 
 class BootstrapTabs extends React.Component {
@@ -17,8 +23,8 @@ class BootstrapTabs extends React.Component {
     return (
       <div>
         <Nav tabs>
-          {tabs.map((tab) => (
-            <NavItem>
+          {tabs.map((tab, index) => (
+            <NavItem key={index}>
               <NavLink disabled={tab.isDisabled} color="success"
                 className={classnames({ active: activeTab === tab.tabID })}
                 onClick={() => { toggle(tab.tabID); }}
@@ -29,8 +35,8 @@ class BootstrapTabs extends React.Component {
           ))}
         </Nav>
         <TabContent activeTab={activeTab}>
-          {tabs.map((tab, index) => (
-            <TabPane tabId={tab.tabID}> 
+          {tabs.map((tab) => (
+            <TabPane tabId={tab.tabID} key={tab.tabID}>
               {tab.tabPaneBody}
             </TabPane>
           ))}
@@ -40,6 +46,7 @@ class BootstrapTabs extends React.Component {
   }
 }
 
+BootstrapTabs.propTypes = propTypes;
 BootstrapTabs.defaultProps = defaultProps;
 
 export default BootstrapTabs;

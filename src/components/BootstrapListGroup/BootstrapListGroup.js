@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ListGroup, ListGroupItem} from "reactstrap";
+import { ListGroup, ListGroupItem } from "reactstrap";
 
-const bootstrapListGroupPropTypes = {
-    tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-    flush: PropTypes.bool,
-    horizontal: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-    className: PropTypes.string,
-    cssModule: PropTypes.object,
+const propTypes = {
+  isFlush: PropTypes.bool,
+  isHorizontal: PropTypes.bool,
+  isLink: PropTypes.bool,
+  items: PropTypes.array.isRequired
 };
 
 const defaultProps = {
   isFlush: false,
   isHorizontal: false,
-  isLink: false,
-  items: []
+  isLink: false
 };
 
 class BootstrapListGroup extends React.Component {
@@ -26,7 +24,7 @@ class BootstrapListGroup extends React.Component {
     return (
       <ListGroup flush={isFlush} horizontal={isHorizontal}>
         {items.map((item) => (
-          <ListGroupItem key={item.key} color={item.color} tag={isLink?'a':'li'} href={isLink?item.link:''}
+          <ListGroupItem key={item.key} color={item.color} tag={isLink ? 'a' : 'li'} href={isLink ? item.link : ''}
             active={item.isActive} action={item.isAction} disabled={item.isDisabled}>
             {item.title}
           </ListGroupItem>
@@ -36,7 +34,7 @@ class BootstrapListGroup extends React.Component {
   }
 }
 
-ListGroup.propTypes = bootstrapListGroupPropTypes;
+BootstrapListGroup.propTypes = propTypes;
 BootstrapListGroup.defaultProps = defaultProps;
 
 export default BootstrapListGroup;

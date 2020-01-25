@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, Col, Row } from "reactstrap";
 
-const bootstrapDropdownPropTypes = {
+const propTypes = {
   isDisabled: PropTypes.bool,
   isOpen: PropTypes.bool,
   toggle: PropTypes.func,
@@ -44,7 +44,7 @@ class BootstrapDropdown extends React.Component {
   }
 }
 
-BootstrapDropdown.propTypes = bootstrapDropdownPropTypes;
+BootstrapDropdown.propTypes = propTypes;
 BootstrapDropdown.defaultProps = defaultProps;
 
 export default BootstrapDropdown;
