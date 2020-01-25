@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Card, CardBody, CardHeader } from 'reactstrap';
-import BootstrapTabs from '../../../components/BootstrapTabs';
-import codeUrl from '../../../code-url';
+import BootstrapTabs from '../../components/BootstrapTabs';
+import codeUrl from '../../code-url';
 
 class BasicTabs extends Component {
   constructor(props) {

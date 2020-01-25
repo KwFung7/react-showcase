@@ -2,9 +2,9 @@ import React from 'react';
 
 const Dashboard = React.lazy(() => import('./containers/Dashboard'));
 const BasicButtons = React.lazy(() => import('./containers/Buttons/BasicButtons'));
-const BasicDropdown = React.lazy(() => import('./containers/Dropdown/BasicDropdown'));
-const BasicListGroup = React.lazy(() => import('./containers/ListGroup/BasicListGroup'));
-const BasicTabs = React.lazy(() => import('./containers/Tabs/BasicTabs'));
+const BasicDropdown = React.lazy(() => import('./containers/Buttons/BasicDropdown'));
+const BasicListGroup = React.lazy(() => import('./containers/ListGroup'));
+const BasicTabs = React.lazy(() => import('./containers/Tabs'));
 const LearnMore = React.lazy(() => import('./containers/LearnMore'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config

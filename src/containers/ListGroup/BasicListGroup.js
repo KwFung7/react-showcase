@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Card, CardBody, CardHeader } from 'reactstrap';
 import { AppSwitch } from '@coreui/react';
-import BootstrapListGroup from '../../../components/BootstrapListGroup';
-import codeUrl from '../../../code-url';
+import BootstrapListGroup from '../../components/BootstrapListGroup';
+import codeUrl from '../../code-url';
 
 class BasicListGroup extends Component {
   constructor(props) {
