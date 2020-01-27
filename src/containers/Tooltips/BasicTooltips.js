@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { Card, CardBody, CardHeader } from 'reactstrap';
+import { Card, CardBody, CardHeader, Button } from 'reactstrap';
 import BootstrapTooltips from '../../components/BootstrapTooltips';
 import codeUrl from '../../code-url';
 import {AppSwitch} from "@coreui/react";
 
 const items = [
-  { target: 'text-tooltips-top', placement: 'top', content: 'Top tooltips' },
-  { target: 'text-tooltips-right', placement: 'right', content: 'Right tooltips' },
-  { target: 'text-tooltips-bottom', placement: 'bottom', content: 'Bottom tooltips' }
+  { target: 'tooltips-top', placement: 'top', content: 'Top tooltips' },
+  { target: 'tooltips-right', placement: 'right', content: 'Right tooltips' },
+  { target: 'tooltips-bottom', placement: 'bottom', content: 'Bottom tooltips' }
 ];
 
 class BasicTooltips extends Component {
@@ -50,7 +50,7 @@ class BasicTooltips extends Component {
             </div>
           </CardHeader>
           <CardBody>
-            <div className="mb-3"><u>Text</u></div>
+            <div className="mb-3"><u>Standard</u></div>
             <div>Below text demonstrates basic tooltips within text:</div>
             <ul>
               {
@@ -64,6 +64,21 @@ class BasicTooltips extends Component {
                 })
               }
             </ul>
+            <div className="mt-5 mb-3"><u>Button</u></div>
+            <div className="d-flex mb-3">
+              {
+                items.map((item, index) => {
+                  return (
+                    <div key={index}>
+                      <Button className="m-1" color="secondary" id={`${item.target}-button`}>
+                        {item.content}
+                      </Button>
+                      <BootstrapTooltips target={`${item.target}-button`} placement={item.placement} {...this.state}>{item.content}</BootstrapTooltips>
+                    </div>
+                  )
+                })
+              }
+            </div>
           </CardBody>
         </Card>
 
