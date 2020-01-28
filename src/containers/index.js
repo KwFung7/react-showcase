@@ -7,5 +7,6 @@ import Tabs from './Tabs';
 import Tooltips from './Tooltips';
 import Accordion from './Accordion';
 import Carousel from './Carousel';
+import Pagination from './Pagination';
 
-export { StandardLayout, Dashboard, Buttons, Dropdown, ListGroup, Tabs };
+export { StandardLayout, Dashboard, Buttons, Dropdown, ListGroup, Tabs, Tooltips, Accordion, Carousel, Pagination };

@@ -56,6 +56,11 @@ export default {
       icon: 'icon-cursor'
     },
     {
+      name: 'Pagination',
+      url: '/pagination',
+      icon: 'icon-cursor'
+    },
+    {
       title: true,
       name: 'Extras'
     },
