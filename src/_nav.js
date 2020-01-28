@@ -41,6 +41,11 @@ export default {
       icon: 'icon-cursor'
     },
     {
+      name: 'Tooltips',
+      url: '/tooltips',
+      icon: 'icon-cursor'
+    },
+    {
       title: true,
       name: 'Extras'
     },
