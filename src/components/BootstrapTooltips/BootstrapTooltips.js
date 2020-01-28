@@ -1,32 +1,72 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Tooltip, Row, Col} from "reactstrap";
+import { Tooltip } from 'reactstrap';
 
 const propTypes = {
-  tooltipOpen: PropTypes.bool,
-  toggle: PropTypes.func
+  placement: PropTypes.oneOf([
+    'auto',
+    'auto-start',
+    'auto-end',
+    'top',
+    'top-start',
+    'top-end',
+    'right',
+    'right-start',
+    'right-end',
+    'bottom',
+    'bottom-start',
+    'bottom-end',
+    'left',
+    'left-start',
+    'left-end',
+  ]),
+  trigger: PropTypes.string,
+  hideArrow: PropTypes.bool,
+  className: PropTypes.string,
+  offset: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  fade: PropTypes.bool,
+  isOpen: PropTypes.bool,
+  target: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 const defaultProps = {
-  tooltipOpen: false,
-  toggle: () => {}
+  placement: 'right',
+  trigger: 'click hover focus',
+  hideArrow: false,
+  className: '',
+  offset: 0,
+  fade: true,
+  isOpen: false
 };
 
-class BootstrapTooltips extends React.Component {
+class BootstrapTooltips extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+  }
+
+  toggle = () => {
+    this.setState({
+      open: !this.state.open
+    });
+  };
 
   render() {
-
-    const { toggle, tooltipOpen } = this.props;
+    const { isOpen, children, ...otherProps } = this.props;
 
     return (
-      <Row className="align-items-center">
-        <Col col="6" sm="4" md="2" xl className="mb-3 mb-xl-0">
-          <div>Tooltips??? <span class="icon-exclamation" id="star" href="#"></span></div>
-          <Tooltip placement="auto" target="star" isOpen={tooltipOpen} toggle={toggle}>
-            Icon tooltip
-          </Tooltip>
-        </Col>
-      </Row>
+      <Tooltip
+        isOpen={isOpen || this.state.open}
+        toggle={this.toggle}
+        {...otherProps}>
+        {children}
+      </Tooltip>
     )
   }
 }

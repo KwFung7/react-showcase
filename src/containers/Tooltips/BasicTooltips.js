@@ -1,42 +1,45 @@
-import React, { Component, Fragment } from 'react';
-import { Card, CardBody, CardHeader } from 'reactstrap';
+import React, { Component } from 'react';
+import { Card, CardBody, CardHeader, Button } from 'reactstrap';
 import BootstrapTooltips from '../../components/BootstrapTooltips';
-import BootstrapUncontrolledTooltip from '../../components/BootstrapUncontrolledTooltip';
 import codeUrl from '../../code-url';
-
-const tooltipText1 = (
-  <Fragment>
-    <h4>Tooltip 1 Contents</h4>
-    <div>TooltipTab 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-  </Fragment>
-);
+import {AppSwitch} from "@coreui/react";
 
 const items = [
-  { targetID: 'tooltip1', buttonText: 'Tooltip auto', placement: 'auto', autohide: true, tooltipText: tooltipText1},
-  { targetID: 'tooltip2', buttonText: 'Tooltip top', placement: 'top', autohide: true, tooltipText: 'Tooltip text'},
-  { targetID: 'tooltip3', buttonText: 'Tooltip right', placement: 'right', autohide: false, tooltipText: 'Tooltip text'},
-  { targetID: 'tooltip4', buttonText: 'Tooltip bottom', placement: 'bottom', autohide: false, tooltipText: 'Tooltip text'},
-  { targetID: 'tooltip5', buttonText: 'Tooltip left', placement: 'left', autohide: true, tooltipText: 'Tooltip text'}
+  { target: 'tooltips-top', placement: 'top', content: 'Top tooltips' },
+  { target: 'tooltips-right', placement: 'right', content: 'Right tooltips' },
+  { target: 'tooltips-bottom', placement: 'bottom', content: 'Bottom tooltips' }
 ];
-
 
 class BasicTooltips extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tooltipOpen: false
+      isOpen: false
     };
   }
 
   toggle = () => {
-      this.setState({
-          tooltipOpen: !this.state.tooltipOpen
-      });
-  }
-  
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  };
+
   render() {
+    const { isOpen } = this.state;
+
     return (
       <div className="animated fadeIn">
+        <div className="d-flex justify-content-end mb-3">
+          <div className="d-flex align-items-center mr-2">
+            <div className="text-black-50">Expanded</div>
+            <AppSwitch
+              className={'mx-1'}
+              variant={'pill'}
+              color={'secondary'}
+              checked={isOpen}
+              onChange={this.toggle} />
+          </div>
+        </div>
         <Card>
           <CardHeader>
             <strong>Bootstrap Tooltips</strong>
@@ -48,12 +51,37 @@ class BasicTooltips extends Component {
           </CardHeader>
           <CardBody>
             <div className="mb-3"><u>Standard</u></div>
-            <BootstrapTooltips {...this.state} toggle={this.toggle}/>
-            <div className="mb-3 mt-4"><u>Uncontrolled Tooltip</u></div>
-            <BootstrapUncontrolledTooltip {...this.state} items={items} />
+            <div>Below text demonstrates basic tooltips within text:</div>
+            <ul>
+              {
+                items.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <span className="text-primary" id={item.target}><u>{item.content}</u></span>
+                      <BootstrapTooltips target={item.target} placement={item.placement} {...this.state}>{item.content}</BootstrapTooltips>
+                    </li>
+                  )
+                })
+              }
+            </ul>
+            <div className="mt-5 mb-3"><u>Button</u></div>
+            <div className="d-flex mb-3">
+              {
+                items.map((item, index) => {
+                  return (
+                    <div key={index}>
+                      <Button className="m-1" color="secondary" id={`${item.target}-button`}>
+                        {item.content}
+                      </Button>
+                      <BootstrapTooltips target={`${item.target}-button`} placement={item.placement} {...this.state}>{item.content}</BootstrapTooltips>
+                    </div>
+                  )
+                })
+              }
+            </div>
           </CardBody>
         </Card>
-        
+
       </div>
     );
   }
