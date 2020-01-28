@@ -7,6 +7,7 @@ const BasicListGroup = React.lazy(() => import('./containers/ListGroup'));
 const BasicTabs = React.lazy(() => import('./containers/Tabs'));
 const BasicTooltips = React.lazy(() => import('./containers/Tooltips'));
 const BasicAccordion = React.lazy(() => import('./containers/Accordion'));
+const BasicCarousel = React.lazy(() => import('./containers/Carousel'));
 const LearnMore = React.lazy(() => import('./containers/LearnMore'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
@@ -20,6 +21,7 @@ const routes = [
   { path: '/tabs', exact: true, name: 'Tabs', component: BasicTabs },
   { path: '/tooltips', exact: true, name: 'Tooltips', component: BasicTooltips },
   { path: '/accordion', exact: true, name: 'Accordion', component: BasicAccordion },
+  { path: '/carousel', exact: true, name: 'Carousel', component: BasicCarousel },
   { path: '/learn-more', name: 'Learn More', component: LearnMore }
 ];
 

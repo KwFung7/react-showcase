@@ -51,6 +51,11 @@ export default {
       icon: 'icon-cursor'
     },
     {
+      name: 'Carousel',
+      url: '/carousel',
+      icon: 'icon-cursor'
+    },
+    {
       title: true,
       name: 'Extras'
     },
