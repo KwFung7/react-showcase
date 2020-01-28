@@ -1,8 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { UncontrolledTooltip, Button, Col, Row } from "reactstrap";
 
-const defaultProps = {
-  items: []
+const propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+    targetID: PropTypes.string,
+    buttonText: PropTypes.string,
+    tooltipText: PropTypes.string,
+    placement: PropTypes.oneOf([
+      'auto',
+      'auto-start',
+      'auto-end',
+      'top',
+      'top-start',
+      'top-end',
+      'right',
+      'right-start',
+      'right-end',
+      'bottom',
+      'bottom-start',
+      'bottom-end',
+      'left',
+      'left-start',
+      'left-end',
+    ])
+  })).isRequired
 };
 
 class BootstrapUncontrolledTooltip extends React.Component {
@@ -29,6 +51,6 @@ class BootstrapUncontrolledTooltip extends React.Component {
   }
 }
 
-BootstrapUncontrolledTooltip.defaultProps = defaultProps;
+BootstrapUncontrolledTooltip.propTypes = propTypes;
 
 export default BootstrapUncontrolledTooltip;
