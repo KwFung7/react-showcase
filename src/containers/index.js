@@ -5,5 +5,6 @@ import Dropdown from './Dropdown';
 import ListGroup from './ListGroup';
 import Tabs from './Tabs';
 import Tooltips from './Tooltips';
+import Accordion from './Accordion';
 
 export { StandardLayout, Dashboard, Buttons, Dropdown, ListGroup, Tabs };

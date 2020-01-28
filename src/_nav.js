@@ -46,6 +46,11 @@ export default {
       icon: 'icon-cursor'
     },
     {
+      name: 'Accordion',
+      url: '/accordion',
+      icon: 'icon-cursor'
+    },
+    {
       title: true,
       name: 'Extras'
     },
