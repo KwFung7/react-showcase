@@ -38,7 +38,6 @@ class BootstrapDropdown extends React.Component {
             </DropdownMenu>
           </ButtonDropdown>
         </Col>
-
       </Row>
     )
   }
