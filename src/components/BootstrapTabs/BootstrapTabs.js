@@ -25,7 +25,8 @@ class BootstrapTabs extends React.Component {
         <Nav tabs>
           {tabs.map((tab, index) => (
             <NavItem key={index}>
-              <NavLink disabled={tab.isDisabled} color="success"
+              <NavLink disabled={tab.isDisabled} color="success" 
+                aria-selected={activeTab === tab.tabID} aria-controls={tab.tabID + "-content"}
                 className={classnames({ active: activeTab === tab.tabID })}
                 onClick={() => { toggle(tab.tabID); }}
               >
@@ -35,8 +36,9 @@ class BootstrapTabs extends React.Component {
           ))}
         </Nav>
         <TabContent activeTab={activeTab}>
-          {tabs.map((tab) => (
-            <TabPane tabId={tab.tabID} key={tab.tabID}>
+          {tabs.map((tab, index) => (
+            <TabPane tabId={tab.tabID} id={tab.tabID + "-content"} key={tab.tabID} 
+              aria-labelledby={tab.tabID} tabindex="-1"> 
               {tab.tabPaneBody}
             </TabPane>
           ))}
