@@ -4,8 +4,8 @@
   "bootstrapDropdown": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapDropdown/BootstrapDropdown.js",
   "bootstrapListGroup": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapListGroup/BootstrapListGroup.js",
   "bootstrapTabs": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapTabs/BootstrapTabs.js",
-  "bootstrapTooltips": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/bootstrapTooltips/BootstrapTooltips.js",
-  "bootstrapAccordion": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/bootstrapAccordion/BootstrapAccordion.js",
-  "bootstrapCarousel": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/bootstrapCarousel/BootstrapCarousel.js",
-  "bootstrapPagination": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/bootstrapPagination/BootstrapPagination.js"
+  "bootstrapTooltips": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapTooltips/BootstrapTooltips.js",
+  "bootstrapAccordion": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapAccordion/BootstrapAccordion.js",
+  "bootstrapCarousel": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapCarousel/BootstrapCarousel.js",
+  "bootstrapPagination": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapPagination/BootstrapPagination.js"
 }

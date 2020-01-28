@@ -38,7 +38,7 @@ class BootstrapTabs extends React.Component {
         <TabContent activeTab={activeTab}>
           {tabs.map((tab, index) => (
             <TabPane tabId={tab.tabID} id={tab.tabID + "-content"} key={tab.tabID} 
-              aria-labelledby={tab.tabID} tabindex="-1"> 
+              aria-labelledby={tab.tabID} tabIndex="-1">
               {tab.tabPaneBody}
             </TabPane>
           ))}

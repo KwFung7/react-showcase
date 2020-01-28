@@ -35,7 +35,7 @@ class BootstrapAccordion extends React.Component {
 
     return (
       <div>
-        <Button {...buttonProps} ><span class={(isOpen ? 'icon-arrow-up' : 'icon-arrow-down') + ' mr-2'} />Toggle</Button>
+        <Button {...buttonProps} ><span className={(isOpen ? 'icon-arrow-up' : 'icon-arrow-down') + ' mr-2'} />Toggle</Button>
         <Collapse {...collapseProps}>
           <div>
               Anim pariatur cliche reprehenderit,
