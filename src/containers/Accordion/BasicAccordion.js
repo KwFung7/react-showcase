@@ -4,18 +4,6 @@ import BootstrapAccordion from '../../components/BootstrapAccordion';
 import codeUrl from '../../code-url';
 
 class BasicAccordion extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOpen: false
-    };
-  }
-
-  toggle = () => {
-      this.setState({
-          isOpen: !this.state.isOpen
-      });
-  }
   
   render() {
     return (
@@ -31,7 +19,12 @@ class BasicAccordion extends Component {
           </CardHeader>
           <CardBody>
             <div className="mb-3"><u>Standard</u></div>
-            <BootstrapAccordion {...this.state} toggle={this.toggle} />
+            <BootstrapAccordion label="Toggle">
+               Anim pariatur cliche reprehenderit,
+              enim eiusmod high life accusamus terry richardson ad squid. Nihil
+              anim keffiyeh helvetica, craft beer labore wes anderson cred
+              nesciunt sapiente ea proident.
+            </BootstrapAccordion>
           </CardBody>
         </Card>
         

@@ -4,46 +4,68 @@ import { Collapse, Button } from "reactstrap";
 
 const propTypes = {
   isOpen: PropTypes.bool,
-  toggle: PropTypes.func
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
+  label: PropTypes.string.isRequired,
+  buttonId: PropTypes.string,
+  collapseId: PropTypes.string,
+  className: PropTypes.string,
+  onEntered: PropTypes.func,
+  onExited: PropTypes.func
 };
 
 const defaultProps = {
   isOpen: false,
-  toggle: () => {}
+  buttonId: 'buttonOne',
+  collapseId: 'collapseOne',
+  className: '',
+  onEntered: () => {},
+  onExited: () => {}
 };
 
 class BootstrapAccordion extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false
+    };
+  }
+
+  toggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  };
 
   render() {
 
-    const { isOpen, toggle, onEntered, onExited } = this.props;
+    let { isOpen, children, label, buttonId, collapseId, className, onEntered, onExited } = this.props;
+    isOpen = isOpen || this.state.isOpen;
+
     const buttonProps = {
-      id: 'buttonOne',
-      color:'link',
-      onClick: toggle,
+      id: buttonId,
+      color: 'link',
+      onClick: this.toggle,
       'aria-expanded': isOpen,
-      'aria-controls': 'collapseOne'
+      'aria-controls': collapseId
     };
     const collapseProps = {
-      id: 'collapseOne',
+      id: collapseId,
       'aria-expanded': isOpen,
-      'aria-labelledby': 'buttonOne',
-      isOpen: isOpen,
-      onEntered: onEntered,
-      onExited: onExited
+      'aria-labelledby': buttonId,
+      isOpen,
+      children,
+      className,
+      onEntered,
+      onExited
     };
 
     return (
       <div>
-        <Button {...buttonProps} ><span className={(isOpen ? 'icon-arrow-up' : 'icon-arrow-down') + ' mr-2'} />Toggle</Button>
-        <Collapse {...collapseProps}>
-          <div>
-              Anim pariatur cliche reprehenderit,
-             enim eiusmod high life accusamus terry richardson ad squid. Nihil
-             anim keffiyeh helvetica, craft beer labore wes anderson cred
-             nesciunt sapiente ea proident.
-          </div>
-        </Collapse>
+        <Button {...buttonProps} ><span className={`${isOpen ? 'icon-arrow-up' : 'icon-arrow-down'} mr-2`} />{label}</Button>
+        <Collapse {...collapseProps} />
       </div>
     )
   }
