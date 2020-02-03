@@ -5,20 +5,31 @@ import classnames from 'classnames';
 
 const propTypes = {
   activeTab: PropTypes.string,
-  toggle: PropTypes.func,
   tabs: PropTypes.array.isRequired
 };
 
 const defaultProps = {
-  activeTab: 'tab1',
-  toggle: () => {}
+  activeTab: 'tab1'
 };
 
 class BootstrapTabs extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeTab: props.activeTab
+    };
+  }
+
+  toggle = (tab) => {
+    this.setState({
+      activeTab: tab
+    });
+  };
 
   render() {
 
-    const { toggle, activeTab, tabs } = this.props;
+    const { tabs } = this.props;
+    const { activeTab } = this.state;
 
     return (
       <div>
@@ -28,7 +39,7 @@ class BootstrapTabs extends React.Component {
               <NavLink disabled={tab.isDisabled} color="success" 
                 aria-selected={activeTab === tab.tabID} aria-controls={tab.tabID + "-content"}
                 className={classnames({ active: activeTab === tab.tabID })}
-                onClick={() => { toggle(tab.tabID); }}
+                onClick={() => this.toggle(tab.tabID)}
               >
                 {tab.tabTitle}
               </NavLink>
@@ -36,7 +47,7 @@ class BootstrapTabs extends React.Component {
           ))}
         </Nav>
         <TabContent activeTab={activeTab}>
-          {tabs.map((tab, index) => (
+          {tabs.map((tab) => (
             <TabPane tabId={tab.tabID} id={tab.tabID + "-content"} key={tab.tabID} 
               aria-labelledby={tab.tabID} tabIndex="-1">
               {tab.tabPaneBody}

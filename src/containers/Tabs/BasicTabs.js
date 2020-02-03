@@ -24,18 +24,6 @@ const tabs = [
 ];
 
 class BasicTabs extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeTab: 'tab1'
-    };
-  }
-
-  toggle = (tab) => {
-    this.setState({
-      activeTab: tab
-    });
-  };
   
   render() {
     return (
@@ -51,7 +39,7 @@ class BasicTabs extends Component {
           </CardHeader>
           <CardBody>
             <div className="mb-3"><u>Standard</u></div>
-            <BootstrapTabs {...this.state} tabs={tabs} toggle={this.toggle} />
+            <BootstrapTabs tabs={tabs} />
           </CardBody>
         </Card>
         
