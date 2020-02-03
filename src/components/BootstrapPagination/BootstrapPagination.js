@@ -12,7 +12,7 @@ const propTypes = {
     disabled: PropTypes.bool,
     control: PropTypes.object,
     'aria-label': PropTypes.string
-  }))
+  })).isRequired
 };
 
 const defaultProps = {
