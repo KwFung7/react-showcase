@@ -4,37 +4,52 @@ import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, Col, Row } 
 
 const propTypes = {
   isDisabled: PropTypes.bool,
-  isOpen: PropTypes.bool,
-  toggle: PropTypes.func,
-  onClick: PropTypes.func,
-  value: PropTypes.string.isRequired
+  isOpen: PropTypes.bool
 };
 
 const defaultProps = {
   isDisabled: false,
-  isOpen: false,
-  toggle: () => {},
-  onClick: () => {}
+  isOpen: false
 };
 
 class BootstrapDropdown extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: props.isOpen,
+      value: 'Dropdown'
+    };
+  }
+
+  toggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  };
+
+  select = (event) => {
+    this.setState({
+      value: event.target.innerText
+    });
+  };
 
   render() {
 
-    const { isDisabled, isOpen, toggle, onClick, value } = this.props;
+    const { isDisabled } = this.props;
+    const { isOpen, value } = this.state;
 
     return (
       <Row className="align-items-center">
         <Col col="6" sm="4" md="2" xl className="mb-3 mb-xl-0">
-          <ButtonDropdown isOpen={isOpen} toggle={toggle}>
+          <ButtonDropdown isOpen={isOpen} toggle={this.toggle}>
             <DropdownToggle caret disabled={isDisabled}>
               {value}
             </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem onClick={onClick}>Item 1</DropdownItem>
-              <DropdownItem onClick={onClick}>Item 2</DropdownItem>
-              <DropdownItem onClick={onClick}>Item 3</DropdownItem>
-              <DropdownItem onClick={onClick}>Item 4</DropdownItem>
+              <DropdownItem onClick={this.select}>Item 1</DropdownItem>
+              <DropdownItem onClick={this.select}>Item 2</DropdownItem>
+              <DropdownItem onClick={this.select}>Item 3</DropdownItem>
+              <DropdownItem onClick={this.select}>Item 4</DropdownItem>
             </DropdownMenu>
           </ButtonDropdown>
         </Col>

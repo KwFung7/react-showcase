@@ -16,39 +16,25 @@ const items = [
 ];
 
 const dropdowns = [
-  { title:'primary', direction:'up', color:'primary', size:'lg' },
-  { title:'secondary', direction:'left', color:'secondary', size:'sm' },
-  { title:'success', direction:'right', color:'success', size:'lg' },
-  { title:'info', direction:'up', color:'info', size:'sm' },
-  { title:'warning', direction:'left', color:'warning', size:'lg' },
-  { title:'danger', direction:'right', color:'danger', size:'sm' },
+  { title: 'primary', direction: 'up', color: 'primary', size: 'lg' },
+  { title: 'secondary', direction: 'left', color: 'secondary', size: 'sm' },
+  { title: 'success', direction: 'right', color: 'success', size: 'lg' },
+  { title: 'info', direction: 'up', color: 'info', size: 'sm' },
+  { title: 'warning', direction: 'left', color: 'warning', size: 'lg' },
+  { title: 'danger', direction: 'right', color: 'danger', size: 'sm' },
 ];
 
 class BasicDropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: false,
-      isDisabled: false,
-      value: 'Dropdown',
+      isDisabled: false
     };
   }
 
   toggleDisableMode = () => {
     this.setState({
       isDisabled: !this.state.isDisabled
-    });
-  };
-
-  toggle = () => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  };
-
-  select = (event) => {
-    this.setState({
-      value: event.target.innerText
     });
   };
   
@@ -79,9 +65,9 @@ class BasicDropdown extends Component {
           </CardHeader>
           <CardBody>
             <div className="mb-3"><u>Standard</u></div>
-            <BootstrapDropdown {...this.state} toggle={this.toggle} onClick={this.select} />
+            <BootstrapDropdown isDisabled={isDisabled} />
             <div className="mb-3 mt-4"><u>Direction / Size</u></div>
-            <BootstrapUncontrolledDropdown {...this.state} items={items} dropdowns={dropdowns} />
+            <BootstrapUncontrolledDropdown isDisabled={isDisabled} items={items} dropdowns={dropdowns} />
           </CardBody>
         </Card>
         
