@@ -65,8 +65,8 @@ export default {
       name: 'Extras'
     },
     {
-      name: 'Learn More',
-      url: '/learn-more',
+      name: 'Learning',
+      url: '/learning',
       icon: 'icon-notebook'
     },
     {

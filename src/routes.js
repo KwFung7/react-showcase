@@ -24,7 +24,7 @@ const routes = [
   { path: '/accordion', exact: true, name: 'Accordion', component: BasicAccordion },
   { path: '/carousel', exact: true, name: 'Carousel', component: BasicCarousel },
   { path: '/pagination', exact: true, name: 'Pagination', component: BasicPagination },
-  { path: '/learn-more', name: 'Learn More', component: LearnMore }
+  { path: '/learning', name: 'Learning', component: LearnMore }
 ];
 
 export default routes;

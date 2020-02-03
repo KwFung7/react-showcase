@@ -11,7 +11,7 @@ class LearnMore extends Component {
         <Row>
           {
             learnMore.map((item, index) => (
-              <Col key={index}>
+              <Col key={index} sm="12" md="6" lg="6">
                 <Card>
                   <CardHeader>
                     <strong>{item.group}</strong>
