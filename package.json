@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "author": "felix.l.kwan",
   "private": true,
+  "homepage": "https://hk-ies-ae-cap-frontend.s3-ap-southeast-1.amazonaws.com/react",
   "repository": {
     "type": "git",
     "url": "git@github.com:KwFung7/react-showcase.git"
