@@ -61,6 +61,18 @@ export default {
       icon: 'icon-cursor'
     },
     {
+      name: 'Form Controls',
+      url: '/form-controls',
+      icon: 'icon-cursor',
+      children: [
+        {
+          name: 'Text Box',
+          url: '/form-controls/text-box',
+          icon: 'icon-puzzle',
+        }
+      ],
+    },
+    {
       title: true,
       name: 'Extras'
     },

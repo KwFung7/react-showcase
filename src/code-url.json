@@ -7,5 +7,7 @@
   "bootstrapTooltips": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapTooltips/BootstrapTooltips.js",
   "bootstrapAccordion": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapAccordion/BootstrapAccordion.js",
   "bootstrapCarousel": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapCarousel/BootstrapCarousel.js",
-  "bootstrapPagination": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapPagination/BootstrapPagination.js"
+  "bootstrapPagination": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapPagination/BootstrapPagination.js",
+  "bootstrapTextBox": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/BootstrapTextBox/BootstrapTextBox.js",
+  "materialTextBox": "https://innersource.accenture.com/projects/ODC-SHOWCASE/repos/react-showcase/browse/src/components/MaterialTextBox/MaterialTextBox.js"
 }
