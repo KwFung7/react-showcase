@@ -83,9 +83,10 @@ export default {
     },
     {
       name: 'Switch to Angular',
-      url: 'https://hk-ies-ae-cap-frontend.s3-ap-southeast-1.amazonaws.com/angular/index.html',
+      url: '/angular/index.html',
       icon: 'fab fa-angular',
-      variant: 'danger'
+      variant: 'danger',
+      absolutePath: true
     }
   ],
 };

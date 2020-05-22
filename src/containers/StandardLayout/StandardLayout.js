@@ -32,6 +32,17 @@ class StandardLayout extends Component {
   }
 
   render() {
+    const navConfig = { items: navigation.items.map((item) => {
+      if (item.absolutePath) {
+        return {
+          ...item,
+          url: `${window.location.origin}${item.url}`
+        };
+      } else {
+        return item;
+      }
+    })};
+
     return (
       <div className="app">
         <AppHeader fixed>
@@ -44,7 +55,11 @@ class StandardLayout extends Component {
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense>
-            <AppSidebarNav navConfig={navigation} {...this.props} router={router}/>
+            <AppSidebarNav
+              {...this.props}
+              router={router}
+              navConfig={navConfig}
+            />
             </Suspense>
             <AppSidebarFooter />
             <AppSidebarMinimizer />
